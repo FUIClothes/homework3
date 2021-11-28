@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Homework3</string>
+    <string name="login">Login</string>
+    <string name="username">username</string>
+    <string name="user">user</string>
+    <string name="date">date</string>
+
+</resources>
