@@ -29,6 +29,7 @@ class LauncherActivity : AppCompatActivity() {
 
             progressHelper.showProgressDialog(this)
 
+            @Suppress("DEPRECATION")
             Handler().postDelayed({
                 val chatService = Intent(this, ChatService::class.java)
                 startService(chatService)

@@ -1,4 +1,4 @@
-@file:Suppress("NULLABILITY_MISMATCH_BASED_ON_JAVA_ANNOTATIONS")
+@file:Suppress("NULLABILITY_MISMATCH_BASED_ON_JAVA_ANNOTATIONS", "DEPRECATION")
 package com.example.homework3.util
 
 import android.app.ProgressDialog

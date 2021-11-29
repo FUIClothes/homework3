@@ -21,10 +21,10 @@ class  ChatService : Service() {
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         rmqaConnection = RmqaConnection.Builder(this)
-            .setServer("gerbil.rmq.cloudamqp.com")
-            .setUsername("ibvyjuin")
-            .setPassword("5i3SgKKfedAlChV0bzNm9UBF1XxcJAVz")
-            .setVhost("ibvyjuin")
+            .setServer("cougar.rmq.cloudamqp.com")
+            .setUsername("ivbvbkiy")
+            .setPassword("8mPWZD7rp5A6wlefzOPTONc_ahtDvYLa")
+            .setVhost("ivbvbkiy")
             .setExchangeName("chat")
             .setConnectionName("connection")
             .setRoutingKey("route_chat")
