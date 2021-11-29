@@ -33,7 +33,7 @@ class ChatActivity : AppCompatActivity() {
 
             val chat = Chat(user,body,time)
             chatAdapter.addChat(chat)
-            mainChatList.smoothScrollToPosition(chats.1)
+            mainChatList.smoothScrollToPosition(1)
             logi(body)
         }
     }
