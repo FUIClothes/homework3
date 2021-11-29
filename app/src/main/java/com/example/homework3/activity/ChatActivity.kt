@@ -30,6 +30,7 @@ class ChatActivity : AppCompatActivity() {
             val time = intent.getLongExtra("time", 0)
 
             val mainChatList: RecyclerView = findViewById(R.id.main_chat_list)
+
             val chat = Chat(user,body,time)
             chatAdapter.addChat(chat)
             mainChatList.smoothScrollToPosition(chats.size)

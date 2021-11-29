@@ -5,11 +5,11 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.homework3.R
 import com.example.homework3.model.Chat
 import com.example.homework3.util.getUserPref
+import kotlinx.android.synthetic.main.item_sender.view.*
 import java.text.SimpleDateFormat
 
 class ChatAdapter(private val context: Context, private val chats: MutableList<Chat>) : RecyclerView.Adapter<ChatAdapter.ChatViewHolder>() {
@@ -39,6 +39,7 @@ class ChatAdapter(private val context: Context, private val chats: MutableList<C
         }
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     fun addChat(chat: Chat) {
         chats.add(chat)
         notifyDataSetChanged()
@@ -47,14 +48,12 @@ class ChatAdapter(private val context: Context, private val chats: MutableList<C
     class ChatViewHolder(view: View) : RecyclerView.ViewHolder(view){
         @SuppressLint("SimpleDateFormat")
         fun bind(chat: Chat) = itemView.run {
-            val text_user: TextView = findViewById(R.id.input_username)
-            val text_body: TextView = findViewById(R.id.text_body)
-            val text_date: TextView = findViewById(R.id.text_date)
             text_user.text = chat.user
             text_body.text = chat.body
 
             val sdf = SimpleDateFormat("dd-MMMM-yyyy / hh:mm:ss")
             val date = sdf.format(chat.time)
+
             text_date.text = date
         }
 

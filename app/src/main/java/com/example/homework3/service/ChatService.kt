@@ -1,10 +1,8 @@
 package com.example.homework3.service
 
 import android.app.Service
-import android.app.Service.START_STICKY
 import android.content.Intent
 import android.os.IBinder
-import android.util.Log
 import com.example.homework3.util.getUserPref
 import com.example.homework3.util.logi
 import com.utsman.rmqa.Rmqa
@@ -45,8 +43,8 @@ class  ChatService : Service() {
         return START_STICKY
     }
 
-   override fun onDestroy() {
+/*  override fun onDestroy() {
         super.onDestroy()
         Rmqa.disconnect(rmqaConnection)
-    }
+    }*/
 }
