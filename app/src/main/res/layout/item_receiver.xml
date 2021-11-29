@@ -22,7 +22,7 @@
             android:textColor="@android:color/white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="user"/>
+            android:text="@string/user"/>
 
         <TextView
             android:id="@+id/text_body"
@@ -34,9 +34,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="date"
+            android:text="@string/date"
             android:textColor="#85FFFFFF"
-            android:textSize="12dp"
+            android:textSize="12sp"
             android:layout_gravity="end"
             android:id="@+id/text_date"/>
 

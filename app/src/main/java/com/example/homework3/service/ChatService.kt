@@ -45,7 +45,7 @@ class  ChatService : Service() {
         return START_STICKY
     }
 
-    override fun onDestroy() {
+   override fun onDestroy() {
         super.onDestroy()
         Rmqa.disconnect(rmqaConnection)
     }
