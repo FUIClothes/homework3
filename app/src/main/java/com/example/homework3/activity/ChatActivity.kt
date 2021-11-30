@@ -8,6 +8,7 @@ import android.content.Intent
 import android.content.IntentFilter
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
@@ -35,7 +36,6 @@ class ChatActivity : AppCompatActivity() {
             val user = intent.getStringExtra("user") as String
             val body = intent.getStringExtra("body") as String
             val time = intent.getLongExtra("time", 0)
-
             val mainChatList: RecyclerView = findViewById(R.id.main_chat_list)
 
             val chat = Chat(user,body,time)
@@ -49,9 +49,9 @@ class ChatActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_chat)
-
         setupRegisterBroadcastReceiver()
         setupRecyclerView()
+        createNotificationChannel()
 
         val btnChatNow: Button = findViewById(R.id.btn_chat_now)
         val inputChat: EditText = findViewById(R.id.input_chat)
@@ -67,7 +67,6 @@ class ChatActivity : AppCompatActivity() {
 
             inputChat.setText("")
         }
-        createNotificationChannel()
     }
 
     private fun setupRegisterBroadcastReceiver() {
