@@ -1,13 +1,18 @@
 package com.example.homework3.activity
 
+import android.app.NotificationChannel
+import android.app.NotificationManager
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
+import android.os.Build
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.NotificationCompat
+import androidx.core.app.NotificationManagerCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.homework3.R
@@ -22,6 +27,8 @@ class ChatActivity : AppCompatActivity() {
 
     private val chats: MutableList<Chat> = mutableListOf()
     private lateinit var chatAdapter: ChatAdapter
+    private val CHANNEL_ID = "channel_id_01"
+    private val notificationId = 101
 
     private val receiverChat = object : BroadcastReceiver() {
         override fun onReceive(context: Context, intent: Intent) {
@@ -35,6 +42,7 @@ class ChatActivity : AppCompatActivity() {
             chatAdapter.addChat(chat)
             mainChatList.smoothScrollToPosition(1)
             logi(body)
+            sendNotification(user, body)
         }
     }
 
@@ -59,6 +67,7 @@ class ChatActivity : AppCompatActivity() {
 
             inputChat.setText("")
         }
+        createNotificationChannel()
     }
 
     private fun setupRegisterBroadcastReceiver() {
@@ -74,6 +83,30 @@ class ChatActivity : AppCompatActivity() {
         layoutManager.stackFromEnd = true
         mainChatList.layoutManager = layoutManager
         mainChatList.adapter = chatAdapter
+    }
+    private fun createNotificationChannel() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            val name = "notificationTitle"
+            val descText = "notificationDesc"
+            val importance = NotificationManager.IMPORTANCE_DEFAULT
+            val channel = NotificationChannel(CHANNEL_ID, name, importance).apply {
+                description= descText
+            }
+            val notificationManager: NotificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+            notificationManager.createNotificationChannel(channel)
+        }
+    }
+
+    private fun sendNotification(user: String, body: String) {
+        val builder = NotificationCompat.Builder(this, CHANNEL_ID)
+            .setSmallIcon(R.drawable.ic_launcher_foreground)
+            .setContentTitle(user)
+            .setContentText(body)
+            .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+
+        with(NotificationManagerCompat.from(this)){
+            notify(notificationId, builder.build())
+        }
     }
 
     override fun onDestroy() {
