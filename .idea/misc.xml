@@ -5,6 +5,12 @@
       <map>
         <entry key="..\:/Mushab/Dicoding/Android Project Package/homework3/app/src/main/res/layout/item_receiver.xml" value="0.1" />
         <entry key="..\:/Mushab/Dicoding/Android Project Package/homework3/app/src/main/res/layout/item_sender.xml" value="0.1" />
+        <entry key="..\:/Users/chies/Desktop/homework3/app/src/main/res/drawable/btn_primary.xml" value="0.10885416666666667" />
+        <entry key="..\:/Users/chies/Desktop/homework3/app/src/main/res/drawable/sender_chat_box.xml" value="0.2203125" />
+        <entry key="..\:/Users/chies/Desktop/homework3/app/src/main/res/layout/activity_chat.xml" value="0.33" />
+        <entry key="..\:/Users/chies/Desktop/homework3/app/src/main/res/layout/activity_launcher.xml" value="0.34549356223175964" />
+        <entry key="..\:/Users/chies/Desktop/homework3/app/src/main/res/layout/item_receiver.xml" value="0.9" />
+        <entry key="..\:/Users/chies/Desktop/homework3/app/src/main/res/layout/item_sender.xml" value="0.41761363636363635" />
       </map>
     </option>
   </component>

@@ -18,9 +18,8 @@ class LauncherActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_launcher)
-
         val progressHelper = ProgressHelper()
-
+        supportActionBar?.hide()
         val btn_login: Button = findViewById(R.id.btn_login)
         val input_username: EditText = findViewById(R.id.input_username)
         btn_login.setOnClickListener {

@@ -22,26 +22,27 @@
 
         <com.google.android.material.card.MaterialCardView
             android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            app:cardCornerRadius="5dp"
-
+            android:layout_height="50dp"
             android:layout_marginStart="12dp"
             android:layout_marginLeft="12dp"
+
             android:layout_marginTop="12dp"
-            android:layout_marginBottom="12dp"
-            android:layout_marginRight="6dp"
             android:layout_marginEnd="6dp"
-            android:minHeight="40dp">
+            android:layout_marginRight="6dp"
+            android:layout_marginBottom="12dp"
+            android:layout_weight="1"
+            android:minHeight="40dp"
+            app:cardCornerRadius="16dp">
 
             <EditText
+                android:id="@+id/input_chat"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:padding="2dp"
-                android:id="@+id/input_chat"
-                android:background="@android:color/transparent"
-                android:layout_margin="6dp"/>
+                android:layout_margin="6dp"
+                android:background="@android:color/white"
+                android:hint="Ketik Pesan"
+                android:padding="2dp" />
 
         </com.google.android.material.card.MaterialCardView>
 
@@ -50,7 +51,7 @@
             android:id="@+id/btn_chat_now"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:theme="@style/Widget.MaterialComponents.Button"
+            android:background="@drawable/btn_primary"
             android:text="Send"
             android:layout_marginStart="6dp"
             android:layout_marginLeft="6dp"
