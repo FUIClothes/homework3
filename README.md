@@ -1,7 +1,7 @@
 # group members
--Gian Chiesa Maghriza (1313618021)
--Mushab Utsmani Ibrahim (1313618023)
--Fajar Nurrahman (1313618038)
+- Gian Chiesa Maghriza (1313618021)
+- Mushab Utsmani Ibrahim (1313618023)
+- Fajar Nurrahman (1313618038)
 
 # app features
 - The app is able to facilitate chatting between two persons and more
@@ -12,5 +12,9 @@
 - Notification 
 
 # streaming link
+https://youtu.be/YoVui2_GAXw
 
 # screen shots
+![Set Username](https://github.com/FUITeams/homework3/blob/master/set_username.jpeg?raw=true)
+![Chat Room](https://github.com/FUITeams/homework3/blob/master/chat_room.jpeg?raw=true)
+![Notification](https://github.com/FUITeams/homework3/blob/master/notif.jpeg?raw=true)
